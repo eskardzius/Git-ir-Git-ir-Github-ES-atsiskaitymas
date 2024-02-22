@@ -6,7 +6,7 @@
 
 body {
   color: white;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Source Sans Pro", sans-serif;
   letter-spacing: 0.2rem;
 }
 .tab-main {
@@ -23,6 +23,12 @@ button {
 button:hover {
   background-color: rgba(255, 255, 255, 0.219);
   cursor: pointer;
+}
+button:first-child {
+  border-radius: 5px 0px 0px 5px;
+}
+button:last-child {
+  border-radius: 0px 5px 5px 0px;
 }
 
 .bg-image {
@@ -80,6 +86,7 @@ button:hover {
   margin: 0 2rem;
   padding: 2rem;
   border-top: 1px solid white;
+  letter-spacing: 15px;
 }
 
 .tab-main .text-container p {
@@ -184,7 +191,7 @@ button:hover {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .text-container p {
     text-align: start;
   }
@@ -196,5 +203,11 @@ button:hover {
 
   .tab-container button {
     width: 100%;
+  }
+  button:first-child {
+    border-radius: 5px 5px 0px 0px;
+  }
+  button:last-child {
+    border-radius: 0px 0px 5px 5px;
   }
 }
