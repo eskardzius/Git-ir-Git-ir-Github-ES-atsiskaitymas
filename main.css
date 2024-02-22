@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0.2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+button {
+  background: none;
+  color: white;
+}
+button:hover {
+  background-color: rgba(255, 255, 255, 0.219);
+  cursor: pointer;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./resources/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  z-index: -2;
+  height: 100%;
+  filter: brightness(0.6);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./resources/bg-overlay.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.2;
+}
+.gem-container {
+  border: 1px solid white;
+  padding: 1rem;
+  border-radius: 100%;
+  width: 125px;
+  height: 125px;
+  display: grid;
+  place-items: center;
+  margin-top: 200px;
+}
+.gem-container img {
+  width: 50px;
+}
+.separator {
+  width: 1px;
+  height: 60px;
+  border: 1px solid white;
+}
+.text-container {
+  width: 100%;
+}
+.text-container h1 {
+  font-size: 6vw;
+  text-align: center;
+  margin: 0 2rem;
+  padding: 2rem;
+  border-top: 1px solid white;
+}
+
+.text-container p {
+  text-align: start;
+  border-bottom: 1px solid white;
+  padding-bottom: 2rem;
+  margin: 0 2rem;
+}
+
+.text-container p a {
+  color: white;
+  text-decoration-style: dotted;
+}
+
+.text-container p a:hover {
+  color: rgb(73, 104, 189);
+}
+
+.tab-container {
+  display: flex;
+}
+.tab-container button {
+  border: 1px solid white;
+  padding: 1rem 0;
+  text-align: center;
+  width: 150px;
+}
+
+.icon {
+  width: 50px;
+}
+
+@media only screen and (max-width: 700px) {
+  .tab-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .tab-container button {
+    width: 100%;
+  }
+}
